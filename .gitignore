@@ -1,0 +1,17 @@
+# Gradle generated files
+build/
+.gradle/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Mod specific
+run/
+
+# OS specific
+.DS_Store
+Thumbs.db

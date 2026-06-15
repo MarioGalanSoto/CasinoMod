@@ -1,0 +1,8 @@
+{
+  "type": "casinomod:add_coin_drops",
+  "conditions": [
+    {
+      "condition": "minecraft:killed_by_player"
+    }
+  ]
+}
