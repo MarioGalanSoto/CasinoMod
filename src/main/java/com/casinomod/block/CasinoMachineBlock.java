@@ -82,10 +82,12 @@ public class CasinoMachineBlock extends Block {
             } else if (roll < 95f) {
                 // 4% chance: lightning strike
                 player.displayClientMessage(Component.literal("§e§lZAP! Lightning strikes!"), true);
-                net.minecraft.world.entity.LightningBolt lightning = net.minecraft.world.entity.EntityType.LIGHTNING_BOLT.create(level);
-                if (lightning != null) {
-                    lightning.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
-                    level.addFreshEntity(lightning);
+                for (Player p : level.players()) {
+                    net.minecraft.world.entity.LightningBolt lightning = net.minecraft.world.entity.EntityType.LIGHTNING_BOLT.create(level);
+                    if (lightning != null) {
+                        lightning.moveTo(p.getX(), p.getY(), p.getZ());
+                        level.addFreshEntity(lightning);
+                    }
                 }
             } else if (roll < 98f) {
                 // 3% chance: zumbon de 22 bloques

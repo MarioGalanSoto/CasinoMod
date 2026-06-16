@@ -1,6 +1,7 @@
 # Gradle generated files
 build/
 .gradle/
+bin/
 
 # IDE files
 .vscode/
